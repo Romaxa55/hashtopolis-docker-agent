@@ -20,7 +20,7 @@ RUN apt-get update && \
 
 COPY entrypoint.sh /usr/local/bin/
 COPY requirements.txt .
-RUN python3.8 install --upgrade pip && \
+RUN python3.8 -m pip install --upgrade pip && \
     python3.8 -m pip install -r requirements.txt && \
     chmod +x /usr/local/bin/entrypoint.sh
 
