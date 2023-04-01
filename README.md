@@ -23,6 +23,10 @@ To configure the Hashtopolis agent, you need to set the following environment va
 
 * `SERVER_URL`: the URL of your Hashtopolis server.
 * `TOKEN`: the access token for your Hashtopolis server.
+```bazaar
+export TOKEN="sdad"
+export SERVER_URL="http://www.example:8080"
+```
 
 These environment variables can be set using the -e flag when running the Docker container.
 
