@@ -18,4 +18,4 @@ COPY requirements.txt .
 #    chmod +x /usr/local/bin/entrypoint.sh
 
 ## указываем команду для запуска контейнера
-ENTRYPOINT ["entrypoint.sh"]
+#ENTRYPOINT ["entrypoint.sh"]
