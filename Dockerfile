@@ -11,12 +11,9 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-RUN pip3 install requests
-RUN pip3 install setuptools
-RUN pip3 install psutil
 
-#COPY entrypoint.sh /usr/local/bin/
-#RUN chmod +x /usr/local/bin/entrypoint.sh
-#
+COPY entrypoint.sh /usr/local/bin/
+RUN chmod +x /usr/local/bin/entrypoint.sh
+
 ## указываем команду для запуска контейнера
-#ENTRYPOINT ["entrypoint.sh"]
+ENTRYPOINT ["entrypoint.sh"]

@@ -7,8 +7,11 @@ curl -L -o /app/hashtopolis.zip "$AGENT_URL"
 cd /app
 unzip hashtopolis.zip
 
-VOUCHER=$(head /dev/urandom | tr -dc A-Za-z | head -c $(($(od -An -N2 -i /dev/random) % 7 + 6)))
-echo $VOUCHER
+pip3 install psutil request
 
-# запускаем Hashtopolis агента
-python3 hashtopolis.zip
+
+#VOUCHER=$(head /dev/urandom | tr -dc A-Za-z | head -c $(($(od -An -N2 -i /dev/random) % 7 + 6)))
+#echo $VOUCHER
+#
+## запускаем Hashtopolis агента
+#python3 hashtopolis.zip
