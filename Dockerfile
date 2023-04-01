@@ -13,7 +13,9 @@ RUN apt-get update && \
 
 
 COPY entrypoint.sh /usr/local/bin/
-RUN chmod +x /usr/local/bin/entrypoint.sh
+COPY requirements.txt .
+RUN pip3 install -r requirements.txt && \
+    chmod +x /usr/local/bin/entrypoint.sh
 
 ## указываем команду для запуска контейнера
 ENTRYPOINT ["entrypoint.sh"]
