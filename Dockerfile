@@ -12,8 +12,8 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 RUN pip3 install requests
-RUN pip3 install psutil
 RUN pip3 install setuptools
+RUN pip3 install psutil
 
 #COPY entrypoint.sh /usr/local/bin/
 #RUN chmod +x /usr/local/bin/entrypoint.sh
