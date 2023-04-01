@@ -9,7 +9,8 @@ WORKDIR /app
 RUN apt-get update && \
     apt-get install -y --no-install-recommends python3 python3-dev python3-pip curl unzip wget python-setuptools && \
     apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+    rm -rf /var/lib/apt/lists/* && \
+    pip3 install setuptools wheel
 
 
 COPY entrypoint.sh /usr/local/bin/
