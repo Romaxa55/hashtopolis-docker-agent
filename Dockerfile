@@ -15,12 +15,12 @@ RUN apt-get update && \
     python3-pip && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
-    pip3 install setuptools wheel && \
+    python3.8 -m pip install setuptools wheel && \
     ln -sf python3.8 /usr/bin/python3
 
 COPY entrypoint.sh /usr/local/bin/
 COPY requirements.txt .
-RUN pip3 install -r requirements.txt && \
+RUN python3.8 -m pip install -r requirements.txt && \
     chmod +x /usr/local/bin/entrypoint.sh
 
 # указываем команду для запуска контейнера
