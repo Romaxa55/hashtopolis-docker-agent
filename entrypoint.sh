@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # скачиваем файл hashtopolis.zip по ссылке и сохраняем его в /app
-curl -L -o /app/hashtopolis.zip "$AGENT_URL"
+curl -L -o /app/hashtopolis.zip "${SERVER_URL}/agents.php?download=1"
 
 # переходим в /app и распаковываем hashtopolis.zip
 cd /app
@@ -18,4 +18,4 @@ curl -X POST -H "Content-Type: application/json" \
 
 
 # запускаем Hashtopolis агента
-python3.8 /app/hashtopolis.zip --url "${SERVER_URL}/api/server.php" --voucher "${VOUCHER}"
+python3.8 hashtopolis.zip --url "${SERVER_URL}/api/server.php" --voucher "${VOUCHER}"
