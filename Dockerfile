@@ -12,10 +12,10 @@ RUN apt-get update && \
     wget \
     python3.8 \
     python3.8-dev && \
+    python3-pip && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
     pip3 install setuptools wheel
-#python3 python3-dev python3-pip
 
 COPY entrypoint.sh /usr/local/bin/
 COPY requirements.txt .
