@@ -12,6 +12,7 @@ RUN apt-get update && \
     wget \
     python3.8 \
     python3.8-dev \
+    python3-dev
     python3-pip && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
