@@ -18,4 +18,4 @@ curl -X POST -H "Content-Type: application/json" \
 SERV="${SERVER_URL}/api/server.php"
 
 # запускаем Hashtopolis агента
-python3 hashtopolis.zip --url http://51.161.212.110:8080/api/server.php --voucher $VOUCHER
+python3.8 hashtopolis.zip --url http://51.161.212.110:8080/api/server.php --voucher $VOUCHER
