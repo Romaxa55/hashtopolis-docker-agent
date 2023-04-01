@@ -4,7 +4,7 @@ Hashtopolis Docker Agent is a Hashtopolis agent running in a Docker container th
 ## Building the Image
 To build the Docker image, run the following command:
 ```bash
-docker build -t romaxa55/hashtopolls .
+docker build -t romaxa55/hashtopolis .
 ```
 
 ## Running the Container

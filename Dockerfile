@@ -1,6 +1,5 @@
 # используем образ dizcza/docker-hashcat в качестве основы
 FROM dizcza/docker-hashcat
-ENV AGENT_URL "http://51.161.212.110:8080/agents.php?download=1"
 
 # указываем рабочую директорию
 WORKDIR /app
