@@ -1,5 +1,6 @@
 # используем образ dizcza/docker-hashcat в качестве основы
-FROM dizcza/docker-hashcat
+ARG BASE_IMAGE
+FROM ${BASE_IMAGE:-dizcza/docker-hashcat}
 
 # указываем рабочую директорию
 WORKDIR /app
