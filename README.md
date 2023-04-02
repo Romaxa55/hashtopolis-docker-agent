@@ -7,6 +7,7 @@ To build the Docker image, run the following command:
 docker build -t romaxa55/hashtopolis .
 docker build -t romaxa55/hashtopolis:latest --build-arg BASE_IMAGE=dizcza/docker-hashcat .
 docker build -t romaxa55/hashtopolis:pocl --build-arg BASE_IMAGE=dizcza/docker-hashcat:pocl .
+docker build -t romaxa55/hashtopolis:cuda --build-arg BASE_IMAGE=dizcza/docker-hashcat:cuda .
 
 ```
 
